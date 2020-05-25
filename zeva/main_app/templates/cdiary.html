@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block topbar %}
+{% endblock topbar %}
+{% block maincarousel %}
+{% endblock maincarousel %}
+{% block display %}
+<div class="container">
+      <div class="row" id="test">
+          <h1 class="h1-style">Client Diaries</h1>
+      </div>
+    <br>
+<div class="container">
+    <div class="row">
+      {% for item in clients %}
+      <div class="col-8 col-md-6 col-lg-4" style="margin:auto">
+        <a href="{% url 'fullscreenclient' item.id %}"><img src="{{item.img.url}}" class="menu"></a>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock display %}
