@@ -14,7 +14,7 @@
     <div class="row">
       {% for item in menu %}
       <div class="col-8 col-md-6 col-lg-4" style="margin:auto" onmouseover="m_over(this)" onmouseout="m_out(this)">
-        <a href="{% url 'display' item.category %}"><img src="{{item.img.url}}" class="menu">
+        <a href="{% url 'display' item.category %}"><img src="{{item.image.url}}" class="menu">
         <div class="centered">{{item.title}}</div></a>
       </div>
       {% endfor %}

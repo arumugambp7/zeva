@@ -13,7 +13,7 @@
     <div class="row">
       {% for coll in colls %}
       <div class="col-8 col-md-6 col-lg-4" style="margin:auto">
-        <a href="{% url 'fullscreen' coll.id %}"><img src="{{coll.img.url}}" class="menu" alt="tutu" id="myimg"></a>
+        <a href="{% url 'fullscreen' coll.id %}"><img src="{{coll.image.url}}" class="menu" alt="tutu" id="myimg"></a>
       </div>
       {% endfor %}
       </div>

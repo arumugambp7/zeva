@@ -15,7 +15,7 @@
     <div class="row">
       {% for item in clients %}
       <div class="col-8 col-md-6 col-lg-4" style="margin:auto">
-        <a href="{% url 'fullscreenclient' item.id %}"><img src="{{item.img.url}}" class="menu"></a>
+        <a href="{% url 'fullscreenclient' item.id %}"><img src="{{item.image.url}}" class="menu"></a>
 
       </div>
       {% endfor %}
