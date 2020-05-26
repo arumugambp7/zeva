@@ -1,20 +1,20 @@
 from django.contrib import admin
-from .models import Menu,Collection,Client,Subscriber
+from .models import Category,Tutus,Customer,Follower
 
 # Register your models here.
-class MenuAdmin(admin.ModelAdmin):
+class CatAdmin(admin.ModelAdmin):
     list_display = ['title',]
 
 
-class CollAdmin(admin.ModelAdmin):
+class TutusAdmin(admin.ModelAdmin):
     list_display = ['name',]
 
 
-class ClientAdmin(admin.ModelAdmin):
+class CustomerAdmin(admin.ModelAdmin):
     list_display = ['name',]
 
 
-admin.site.register(Menu, MenuAdmin)
-admin.site.register(Collection, CollAdmin)
-admin.site.register(Client, ClientAdmin)
-admin.site.register(Subscriber)
+admin.site.register(Category, CatAdmin)
+admin.site.register(Tutus, TutusAdmin)
+admin.site.register(Customer, CustomerAdmin)
+admin.site.register(Follower)
