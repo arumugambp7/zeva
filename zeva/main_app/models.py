@@ -7,7 +7,7 @@ import cloudinary
 
 class Menu(models.Model):
      category = models.CharField(max_length=3,primary_key=True)
-     image = CloudinaryField('image')
+     # image = CloudinaryField('image')
      title = models.CharField(max_length=25)
      class meta:
           db_table = 'Menu'
@@ -18,7 +18,7 @@ class Menu(models.Model):
 
 class Collection(models.Model):
      name = models.CharField(max_length=6)
-     image = CloudinaryField('image')
+     # image = CloudinaryField('image')
      menu = models.ManyToManyField(Menu)
      class meta:
           db_table = 'Collection'
@@ -29,7 +29,7 @@ class Collection(models.Model):
 class Client(models.Model):
      name = models.CharField(max_length=25,blank=True)
      # img = models.ImageField(upload_to='clientpics')
-     image = CloudinaryField('image')
+     # image = CloudinaryField('image')
      location = models.CharField(max_length=25,blank=True)
      contact = models.CharField(blank=True,max_length=10)
      email = models.EmailField(blank=True)
