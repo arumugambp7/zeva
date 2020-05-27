@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Category,Tutus,Customer,Follower
+from .models import Menu,Collection,Customer,Follower
 
 # Register your models here.
-class CatAdmin(admin.ModelAdmin):
+class MenuAdmin(admin.ModelAdmin):
     list_display = ['title',]
 
 
-class TutusAdmin(admin.ModelAdmin):
+class CollectionAdmin(admin.ModelAdmin):
     list_display = ['name',]
 
 
@@ -14,7 +14,11 @@ class CustomerAdmin(admin.ModelAdmin):
     list_display = ['name',]
 
 
-admin.site.register(Category, CatAdmin)
-admin.site.register(Tutus, TutusAdmin)
+class FollowerAdmin(admin.ModelAdmin):
+    list_display = ['name',]
+
+
+admin.site.register(Menu, MenuAdmin)
+admin.site.register(Collection, CollectionAdmin)
 admin.site.register(Customer, CustomerAdmin)
-admin.site.register(Follower)
+admin.site.register(Follower, FollowerAdmin)

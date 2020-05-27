@@ -5,23 +5,22 @@ import cloudinary
 
 # Create your models here.
 
-class Category(models.Model):
+class Menu(models.Model):
      category = models.CharField(max_length=3,primary_key=True)
      image = CloudinaryField('image')
      title = models.CharField(max_length=25)
      class meta:
-          db_table = 'Category'
+          db_table = 'Menu'
      def __str__(self):
           return self.title
 
 
-
-class Tutus(models.Model):
+class Collection(models.Model):
      name = models.CharField(max_length=6)
      image = CloudinaryField('image')
-     menu = models.ManyToManyField(Category)
+     menu = models.ManyToManyField(Menu)
      class meta:
-          db_table = 'Tutus'
+          db_table = 'Collection'
      def __str__(self):
           return self.name
 
@@ -32,7 +31,7 @@ class Customer(models.Model):
      location = models.CharField(max_length=25,blank=True)
      contact = models.CharField(blank=True,max_length=10)
      email = models.EmailField(blank=True)
-     menu = models.ManyToManyField(Category, blank=True)
+     menu = models.ManyToManyField(Menu, blank=True)
      class meta:
           db_table = 'Customer'
      def __str__(self):
