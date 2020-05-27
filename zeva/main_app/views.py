@@ -32,13 +32,13 @@ def fs(request,id):
 
     mobj = Menu.objects.all()
     cobj = Collection.objects.get(id=id)
-    return render(request, "fs.html", {'menu': mobj,'img':cobj.img})
+    return render(request, "fs.html", {'menu': mobj,'image':cobj.image})
 
 def fsc(request,id):
 
     mobj = Menu.objects.all()
     cobj = Customer.objects.get(id=id)
-    return render(request, "fsc.html", {'menu': mobj,'img':cobj.img})
+    return render(request, "fsc.html", {'menu': mobj,'image':cobj.image })
 
 def aboutus(request):
 
