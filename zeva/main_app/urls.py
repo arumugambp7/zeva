@@ -13,3 +13,4 @@ urlpatterns = [path('', views.index, name='home'),
                path('fullscreenclient/<str:id>',views.fsc,name='fullscreenclient'),
                path('display/<str:title>', views.display, name='display')]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
